@@ -1,0 +1,235 @@
+<?php
+
+include('connect.php');
+
+
+
+
+
+?>
+<html>
+<head>
+
+<script>
+    
+function back(){
+ window.location.href="entry.php"; 
+    
+}
+</script>
+<style type="text/css">
+
+#back{
+    position:absolute;
+    margin-left:60%;
+    margin-top:5%;
+    cursor:pointer;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+</head>
+<table>
+     <tr>
+         <td onmouseover="database()">
+		 Time
+		 </td>
+		 
+		 
+		 <td>
+		 Impressions
+		 </td>
+		 
+		 
+		 <td>
+		 Cost
+		 </td>
+        
+		
+		
+		 <td>
+		 Clicks
+		 </td>
+		 
+		 
+		 <td>
+		 Conversions
+		 </td>
+		 
+		 
+		 <td>
+		 Earnings
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 CVR
+		 </td>
+		 
+		 
+		 <td>
+		 EPC
+		 </td>
+		 
+		 
+		 <td>
+		 EPU
+		 </td>
+		 
+     </tr>
+
+	 <?php
+	 $profit = $_GET['profit'];
+	 $name = $_GET['name'];
+	 $retrieve = "SELECT * FROM data WHERE name='$name'";
+	 $retrieve2 = mysql_query($retrieve);
+	 while($row2=mysql_fetch_array($retrieve2))
+	 {
+	     
+	     $time = $row2['time'];
+	     $impressions =$row2['impressions'];
+	     $cost =$row2['cost'];
+	     $clicks =$row2['clicks'];
+	     $conversions =$row2['conversions'];
+	     $earnings =$row2['earnings'];
+	 echo'
+	 <tr>
+         <td>
+             
+                
+         '.$time.'
+             
+             
+		 </td>
+		 
+		 
+		 <td>
+		
+		 '.$impressions.'
+
+		 </td>
+		 
+		 
+		 <td>
+
+        '.$cost.'
+		 </td>
+        
+		
+		
+		 <td>
+         '.$clicks.'
+		 </td>
+		 
+		 
+		 <td>
+       '.$conversions.'
+		 </td>
+		 
+		 
+		 <td>
+		'.$earnings.'
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+     ';
+}
+	?>
+	 
+	 <tr>
+         <td>
+            
+		 </td>
+		 
+		 
+		 <td>
+
+		 </td>
+		 
+		 
+		 <td>
+	
+		 </td>
+        
+		
+		
+		 <td>
+	
+		 </td>
+		 
+		 
+		 <td>
+		     <?php
+
+
+
+	    echo "Net Income:"; echo $profit;
+	  ?>
+		 </td>
+		 
+		 
+		 <td>
+
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 
+		 </td>
+		 
+		 
+		 <td>
+		 
+		 </td>
+		 
+		 
+		 <td>
+		 
+		 </td>
+		 
+     </tr>
+	 
+</table>
+<span id="back" onclick="back()">Make a new report</span>
+
+
+<body>
+
+
+</body>
+</html>

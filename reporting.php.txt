@@ -1,0 +1,2549 @@
+<?php
+
+include('connect.php');
+
+
+
+
+?>
+<html>
+<head>
+<script>
+    
+function back(){
+ window.location.href="entry.php"; 
+    
+}
+</script>
+<style type="text/css">
+
+
+#back{
+    position:absolute;
+    margin-left:60%;
+    margin-top:5%;
+    cursor:pointer;
+    font-family:Verdana;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+</head>
+<table>
+     <tr>
+         <td onmouseover="database()">
+		 Time
+		 </td>
+		 
+		 
+		 <td>
+		 Impressions
+		 </td>
+		 
+		 
+		 <td>
+		 Cost
+		 </td>
+        
+		
+		
+		 <td>
+		 Clicks
+		 </td>
+		 
+		 
+		 <td>
+		 Conversions
+		 </td>
+		 
+		 
+		 <td>
+		 Earnings
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 CVR
+		 </td>
+		 
+		 
+		 <td>
+		 EPC
+		 </td>
+		 
+		 
+		 <td>
+		 EPU
+		 </td>
+		 
+     </tr>
+
+	 
+	 <tr>
+         <td>
+             <?php
+             
+             
+// Return date/time info of a timestamp; then format the output
+$mydate=getdate();
+$d=  "$mydate[month]$mydate[mday],$mydate[hours]:$mydate[minutes]";
+$now = date('Y/m/dH:i');
+
+             
+             
+             
+              if ($_POST['zone']=="Eastern"){
+		 $x= "12:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $x= "10:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $x = "9:00";
+             }
+             $imp = $_POST['impressions'][0];
+             $cost = $_POST['cost'][0];
+             $clicks = $_POST['clicks'][12];
+             $conversions = $_POST['conversion'][12];
+             $earnings = $_POST['earnings'][12];
+                $push = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime,name) VALUES('$x','$imp','$cost','$clicks','$conversions','$earnings','$now','$now')";
+                $push2 =mysql_query($push);
+                 
+                 
+                 
+                 
+                  if ($_POST['zone']=="Eastern"){
+		 $z= "13:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $z= "11:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $z = "10:00";
+             }
+             $imp2 = $_POST['impressions'][1];
+             $cost2 = $_POST['cost'][1];
+             $clicks2 = $_POST['clicks'][13];
+             $conversions2 = $_POST['conversion'][13];
+             $earnings2 = $_POST['earnings'][13];
+                $push3 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$z','$imp2','$cost2','$clicks2','$conversions2','$earnings2','$now')";
+                $push4 =mysql_query($push3);
+                 
+                 
+                 
+                  if ($_POST['zone']=="Eastern"){
+		 $a= "14:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a= "12:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a = "11:00";
+             }
+             $imp3 = $_POST['impressions'][2];
+             $cost3 = $_POST['cost'][2];
+             $clicks3 = $_POST['clicks'][14];
+             $conversions3 = $_POST['conversion'][14];
+             $earnings3 = $_POST['earnings'][14];
+                $push5 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a','$imp3','$cost3','$clicks3','$conversions3','$earnings3','$now')";
+                $push6 =mysql_query($push5);
+                 
+                 
+                  
+                  if ($_POST['zone']=="Eastern"){
+		 $a2= "15:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a2= "13:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a2 = "12:00";
+             }
+             $imp4 = $_POST['impressions'][3];
+             $cost4 = $_POST['cost'][3];
+             $clicks4 = $_POST['clicks'][15];
+             $conversions4 = $_POST['conversion'][15];
+             $earnings4 = $_POST['earnings'][15];
+                $push7 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a2','$imp4','$cost4','$clicks4','$conversions4','$earnings4','$now')";
+                $push8 =mysql_query($push7);
+                 
+                 
+                 
+                 
+                 
+                 
+                  
+                  if ($_POST['zone']=="Eastern"){
+		 $a3= "16:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a3= "14:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a3 = "13:00";
+             }
+             $imp5 = $_POST['impressions'][4];
+             $cost5 = $_POST['cost'][4];
+             $clicks5 = $_POST['clicks'][16];
+             $conversions5 = $_POST['conversion'][16];
+             $earnings5 = $_POST['earnings'][16];
+                $push9 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a3','$imp5','$cost5','$clicks5','$conversions5','$earnings5','$now')";
+                $push10 =mysql_query($push9);
+                 
+                 
+                 
+                  
+                  if ($_POST['zone']=="Eastern"){
+		 $a4= "17:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a4= "15:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a4 = "14:00";
+             }
+             $imp6 = $_POST['impressions'][5];
+             $cost6 = $_POST['cost'][5];
+             $clicks6 = $_POST['clicks'][17];
+             $conversions6 = $_POST['conversion'][17];
+             $earnings6 = $_POST['earnings'][17];
+                $push11 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a4','$imp6','$cost6','$clicks6','$conversions6','$earnings6','$now')";
+                $push12 =mysql_query($push11);
+                 
+                 
+                 
+                 
+                  
+                  if ($_POST['zone']=="Eastern"){
+		 $a5= "18:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a5= "16:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a5 = "15:00";
+             }
+             $imp7 = $_POST['impressions'][6];
+             $cost7 = $_POST['cost'][6];
+             $clicks7 = $_POST['clicks'][18];
+             $conversions7 = $_POST['conversion'][18];
+             $earnings7 = $_POST['earnings'][18];
+                $push13 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a5','$imp7','$cost7','$clicks7','$conversions7','$earnings7','$now')";
+                $push14 =mysql_query($push13);
+                 
+                       
+                 
+                 
+                 
+                   
+                  
+                  if ($_POST['zone']=="Eastern"){
+		 $a6= "19:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a6= "17:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a6 = "16:00";
+             }
+             $imp8 = $_POST['impressions'][7];
+             $cost8 = $_POST['cost'][7];
+             $clicks8 = $_POST['clicks'][19];
+             $conversions8 = $_POST['conversion'][19];
+             $earnings8 = $_POST['earnings'][19];
+                $push15 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a6','$imp8','$cost8','$clicks8','$conversions8','$earnings8','$now')";
+                $push16 =mysql_query($push15);  
+                 
+                 
+           
+           
+                 
+                  
+                  if ($_POST['zone']=="Eastern"){
+		 $a7= "20:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a7= "18:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a7 = "17:00";
+             }
+             $imp9 = $_POST['impressions'][8];
+             $cost9 = $_POST['cost'][8];
+             $clicks9 = $_POST['clicks'][20];
+             $conversions9 = $_POST['conversion'][20];
+             $earnings9 = $_POST['earnings'][20];
+                $push17 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a7','$imp9','$cost9','$clicks9','$conversions9','$earnings9','$now')";
+                $push18 =mysql_query($push17);  
+                 
+                 
+                      
+                  if ($_POST['zone']=="Eastern"){
+		 $a8= "21:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a8= "19:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a8 = "18:00";
+             }
+             $imp10 = $_POST['impressions'][9];
+             $cost10 = $_POST['cost'][9];
+             $clicks10 = $_POST['clicks'][21];
+             $conversions10 = $_POST['conversion'][21];
+             $earnings10 = $_POST['earnings'][21];
+                $push19 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a8','$imp10','$cost10','$clicks10','$conversions10','$earnings10','$now')";
+                $push20 =mysql_query($push19);  
+                   
+                 
+                 
+                        
+                  if ($_POST['zone']=="Eastern"){
+		 $a9= "22:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a9= "20:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a9 = "19:00";
+             }
+             $imp11 = $_POST['impressions'][10];
+             $cost11 = $_POST['cost'][10];
+             $clicks11 = $_POST['clicks'][22];
+             $conversions11 = $_POST['conversion'][22];
+             $earnings11 = $_POST['earnings'][22];
+                $push21 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a9','$imp11','$cost11','$clicks11','$conversions11','$earnings11','$now')";
+                $push22 =mysql_query($push21);  
+           
+           
+           
+                            
+                  if ($_POST['zone']=="Eastern"){
+		 $a10= "23:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a10= "21:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a10 = "20:00";
+             }
+             $imp12 = $_POST['impressions'][11];
+             $cost12 = $_POST['cost'][11];
+             $clicks12 = $_POST['clicks'][23];
+             $conversions12 = $_POST['conversion'][23];
+             $earnings12 = $_POST['earnings'][23];
+                $push23 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a10','$imp12','$cost12','$clicks12','$conversions12','$earnings12','$now')";
+                $push24 =mysql_query($push23);  
+           
+           
+           
+           
+           
+                              
+                  if ($_POST['zone']=="Eastern"){
+		 $a11= "0:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a11= "22:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a11 = "21:00";
+             }
+             $imp13 = $_POST['impressions'][12];
+             $cost13 = $_POST['cost'][12];
+             $clicks13 = $_POST['clicks'][0];
+             $conversions13 = $_POST['conversion'][0];
+             $earnings13 = $_POST['earnings'][0];
+                $push25 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a11','$imp13','$cost13','$clicks13','$conversions13','$earnings13','$now')";
+                $push26 =mysql_query($push25);  
+           
+           
+           
+           
+              
+           
+                              
+                  if ($_POST['zone']=="Eastern"){
+		 $a12= "1:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a12= "23:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a12 = "22:00";
+             }
+             $imp14= $_POST['impressions'][13];
+             $cost14 = $_POST['cost'][13];
+             $clicks14 = $_POST['clicks'][1];
+             $conversions14 = $_POST['conversion'][1];
+             $earnings14 = $_POST['earnings'][1];
+                $push27 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a12','$imp14','$cost14','$clicks14','$conversions14','$earnings14','$now')";
+                $push28 =mysql_query($push27);  
+           
+           
+           
+           
+           
+                              
+                  if ($_POST['zone']=="Eastern"){
+		 $a13= "2:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a13= "0:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a13 = "23:00";
+             }
+             $imp15= $_POST['impressions'][14];
+             $cost15 = $_POST['cost'][14];
+             $clicks15 = $_POST['clicks'][2];
+             $conversions15 = $_POST['conversion'][2];
+             $earnings15 = $_POST['earnings'][2];
+                $push29 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a13','$imp15','$cost15','$clicks15','$conversions15','$earnings15','$now')";
+                $push30 =mysql_query($push29);  
+           
+                              
+               
+                 
+            
+            
+           
+           
+                              
+                  if ($_POST['zone']=="Eastern"){
+		 $a14= "3:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a14= "1:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a14 = "0:00";
+             }
+             $imp16= $_POST['impressions'][15];
+             $cost16 = $_POST['cost'][15];
+             $clicks16 = $_POST['clicks'][3];
+             $conversions16 = $_POST['conversion'][3];
+             $earnings16 = $_POST['earnings'][3];
+                $push31 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a14','$imp16','$cost16','$clicks16','$conversions16','$earnings16','$now')";
+                $push32 =mysql_query($push31);  
+           
+           
+           
+           
+                              
+                  if ($_POST['zone']=="Eastern"){
+		 $a15= "4:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a15= "2:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a15 = "1:00";
+             }
+             $imp17= $_POST['impressions'][16];
+             $cost17 = $_POST['cost'][16];
+             $clicks17 = $_POST['clicks'][4];
+             $conversions17 = $_POST['conversion'][4];
+             $earnings17 = $_POST['earnings'][4];
+                $push33 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a15','$imp17','$cost17','$clicks17','$conversions17','$earnings17','$now')";
+                $push34 =mysql_query($push33);  
+                              
+            
+                 
+                 
+                 
+                 
+                 
+           
+                              
+                  if ($_POST['zone']=="Eastern"){
+		 $a16= "5:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a16= "3:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a16 = "2:00";
+             }
+             $imp18= $_POST['impressions'][17];
+             $cost18 = $_POST['cost'][17];
+             $clicks18 = $_POST['clicks'][5];
+             $conversions18 = $_POST['conversion'][5];
+             $earnings18 = $_POST['earnings'][5];
+                $push35 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a16','$imp18','$cost18','$clicks18','$conversions18','$earnings18','$now')";
+                $push36 =mysql_query($push35);  
+                 
+                 
+              
+                              
+                  if ($_POST['zone']=="Eastern"){
+		 $a17= "6:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a17= "4:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a17 = "3:00";
+             }
+             $imp19= $_POST['impressions'][18];
+             $cost19 = $_POST['cost'][18];
+             $clicks19 = $_POST['clicks'][6];
+             $conversions19 = $_POST['conversion'][6];
+             $earnings19 = $_POST['earnings'][6];
+                $push37 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a17','$imp19','$cost19','$clicks19','$conversions19','$earnings19','$now')";
+                $push38 =mysql_query($push37);     
+                 
+                 
+                        
+                  if ($_POST['zone']=="Eastern"){
+		 $a18= "7:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a18= "5:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a18 = "4:00";
+             }
+             $imp20= $_POST['impressions'][19];
+             $cost20 = $_POST['cost'][19];
+             $clicks20 = $_POST['clicks'][7];
+             $conversions20 = $_POST['conversion'][7];
+             $earnings20 = $_POST['earnings'][7];
+                $push39 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a18','$imp20','$cost20','$clicks20','$conversions20','$earnings20','$now')";
+                $push40 =mysql_query($push39);     
+                       
+                 
+             
+                       
+                  if ($_POST['zone']=="Eastern"){
+		 $a19= "8:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a19= "6:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a19 = "5:00";
+             }
+             $imp21= $_POST['impressions'][20];
+             $cost21 = $_POST['cost'][20];
+             $clicks21 = $_POST['clicks'][8];
+             $conversions21 = $_POST['conversion'][8];
+             $earnings21 = $_POST['earnings'][8];
+                $push41 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a19','$imp21','$cost21','$clicks21','$conversions21','$earnings21','$now')";
+                $push42 =mysql_query($push41);     
+                          
+             
+                   
+                  if ($_POST['zone']=="Eastern"){
+		 $a20= "9:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a20= "7:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a20 = "6:00";
+             }
+             $imp22= $_POST['impressions'][21];
+             $cost22 = $_POST['cost'][21];
+             $clicks22 = $_POST['clicks'][9];
+             $conversions22 = $_POST['conversion'][9];
+             $earnings22 = $_POST['earnings'][9];
+                $push43 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a20','$imp22','$cost22','$clicks22','$conversions22','$earnings22','$now')";
+                $push44 =mysql_query($push43);     
+                          
+             
+             
+           
+                  if ($_POST['zone']=="Eastern"){
+		 $a21= "10:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a21= "8:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a21 = "7:00";
+             }
+             $imp23= $_POST['impressions'][22];
+             $cost23 = $_POST['cost'][22];
+             $clicks23 = $_POST['clicks'][10];
+             $conversions23 = $_POST['conversion'][10];
+             $earnings23 = $_POST['earnings'][10];
+                $push45 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a21','$imp23','$cost23','$clicks23','$conversions23','$earnings23','$now')";
+                $push46 =mysql_query($push45);     
+                             
+             
+               
+           
+                  if ($_POST['zone']=="Eastern"){
+		 $a22= "11:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 $a22= "9:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 $a22 = "8:00";
+             }
+             $imp24= $_POST['impressions'][23];
+             $cost24 = $_POST['cost'][23];
+             $clicks24 = $_POST['clicks'][11];
+             $conversions24 = $_POST['conversion'][11];
+             $earnings24 = $_POST['earnings'][11];
+                $push47 = "INSERT INTO data (time,impressions,cost,clicks,conversions,earnings,ctime) VALUES('$a22','$imp24','$cost24','$clicks24','$conversions24','$earnings24','$now')";
+                $push48 =mysql_query($push47);     
+                             
+            
+            
+                 
+             
+             if ($_POST['zone']=="Eastern"){
+		 echo "11:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "9:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "9:00";
+             }
+             
+             
+             
+             echo'
+
+		 </td>
+		 
+		 
+		 <td>
+		
+		  '.$_POST['impressions'][0].'
+
+		 </td>
+		 ';
+		 ?>
+		 <td>
+		 <?php
+		 echo $_POST['cost'][0];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][12];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][12];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][12];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+
+	 
+	  <tr>
+         <td>
+		   <?php
+		 
+		 if ($_POST['zone']=="Eastern"){
+		 echo "13:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "11:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "10:00";
+             }
+		 
+		 
+		 
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][1];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][1];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][13];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][13];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][13];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	 
+	  <tr>
+         <td>
+		 	<?php
+	if ($_POST['zone']=="Eastern"){
+		 echo "14:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "12:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "11:00";
+             }
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+			<?php
+		 echo $_POST['impressions'][2];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['cost'][2];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][14];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][14];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][14];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	 
+	 <tr>
+         <td>
+		 	<?php
+		
+		 
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "15:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "13:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "12:00";
+             }
+		 
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+			<?php
+		 echo $_POST['impressions'][3];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['cost'][3];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][15];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][15];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][15];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+		 	<?php
+		 	
+		 	
+			if ($_POST['zone']=="Eastern"){
+		 echo "16:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "14:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "13:00";
+             }
+		 
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+			<?php
+		 echo $_POST['impressions'][4];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['cost'][4];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][16];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][16];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][16];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+		 	<?php
+		 	
+		if ($_POST['zone']=="Eastern"){
+		 echo "17:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "15:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "14:00";
+             }
+		 
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+			<?php
+		 echo $_POST['impressions'][5];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['cost'][5];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][17];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][17];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][17];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  
+	 <tr>
+         <td>
+		 	<?php
+		 	
+			if ($_POST['zone']=="Eastern"){
+		 echo "18:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "16:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "15:00";
+             }
+		 
+		 
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+			<?php
+		 echo $_POST['impressions'][6];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['cost'][6];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][18];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][18];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][18];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+
+	 
+	  <tr>
+         <td>
+		 	<?php
+		 	
+		 	
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "19:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "17:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "16:00";
+             }
+		 
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+			<?php
+		 echo $_POST['impressions'][7];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['cost'][7];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][19];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][19];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][19];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	 
+	  <tr>
+         <td>
+		 	<?php
+		 	
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "20:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "18:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "17:00";
+             }
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+			<?php
+		 echo $_POST['impressions'][8];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['cost'][8];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][20];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][20];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][20];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	 
+	 <tr>
+         <td>
+		 	<?php
+		 	
+			if ($_POST['zone']=="Eastern"){
+		 echo "21:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "19:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "18:00";
+             }
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+			<?php
+		 echo $_POST['impressions'][9];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['cost'][9];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][21];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][21];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][21];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+		 	<?php
+		 	
+		if ($_POST['zone']=="Eastern"){
+		 echo "22:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "20:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "19:00";
+             }
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+			<?php
+		 echo $_POST['impressions'][10];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['cost'][10];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][22];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][22];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][22];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+		 <?php
+		 
+		 
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "23:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "21:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "20:00";
+             }
+		 
+		 
+?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][11];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][11];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][23];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][23];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][23];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  
+	 <tr>
+         <td>
+		 <?php
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "0:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "22:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "21:00";
+             }
+             ?>
+		 </td>
+		 
+		 
+		 <td>
+	    <?php
+		 echo $_POST['impressions'][12];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][12];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][0];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][0];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][0];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+
+	 
+	  <tr>
+         <td>
+		 <?php
+		 
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "1:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "23:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "22:00";
+             }
+             ?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][13];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][13];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][1];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][1];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][1];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	 
+	  <tr>
+         <td>
+		 <?php
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "2:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "0:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "23:00";
+             }
+             
+             ?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][14];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][14];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][2];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][2];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][2];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	 
+	 <tr>
+         <td>
+             
+             <?php
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "3:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "1:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "0:00";
+             }
+             
+             ?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][15];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][15];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][3];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][3];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][3];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+             <?php
+			if ($_POST['zone']=="Eastern"){
+		 echo "4:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "2:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "1:00";
+             }
+             
+             ?>
+		 
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][16];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][16];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][4];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][4];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][4];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+             
+            <?php
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "5:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "3:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "2:00";
+             }
+		 ?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][17];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][17];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][5];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][5];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][5];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+             <?php
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "6:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "4:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "3:00";
+             }
+             
+             ?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][18];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][18];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][6];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][6];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][6];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+             <?php
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "7:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "5:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "4:00";
+             }
+             ?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][19];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][19];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][7];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][7];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][7];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+             
+             <?php
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "8:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "6:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "5:00";
+             }
+             
+             ?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][20];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][20];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][8];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][8];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][8];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+             <?php
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "9:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "7:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "6:00";
+             }
+             
+             ?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][21];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][21];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][9];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][9];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][9];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+             <?php
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "10:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "8:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "7:00";
+             }
+             ?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][22];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][22];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][10];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][10];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][10];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+             <?php
+		 	if ($_POST['zone']=="Eastern"){
+		 echo "11:00";
+             }
+             
+             if ($_POST['zone']=="Mountain"){
+		 echo "9:00";
+             }
+             
+             if ($_POST['zone']=="Pacific"){
+		 echo "8:00";
+             }
+             ?>
+		 </td>
+		 
+		 
+		 <td>
+		<?php
+		 echo $_POST['impressions'][23];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 <?php
+		 echo $_POST['cost'][23];
+?>
+		 </td>
+        
+		
+		
+		 <td>
+		 	<?php
+		 echo $_POST['clicks'][11];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['conversions'][11];
+?>
+		 </td>
+		 
+		 
+		 <td>
+		 	<?php
+		 echo $_POST['earnings'][11];
+?>
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 0%
+		 </td>
+		 
+		 
+		 <td>
+		 $0
+		 </td>
+		 
+		 
+		 <td>
+		 0
+		 </td>
+		 
+     </tr>
+	 
+	 
+	 
+	 <tr>
+         <td>
+            
+		 </td>
+		 
+		 
+		 <td>
+
+		 </td>
+		 
+		 
+		 <td>
+	
+		 </td>
+        
+		
+		
+		 <td>
+	
+		 </td>
+		 
+		 
+		 <td>
+		     <?php
+$cost = $_POST['cost'][0] + $_POST['cost'][1] + $_POST['cost'][2] + $_POST['cost'][3] + $_POST['cost'][4] + $_POST['cost'][5] + $_POST['cost'][6] + $_POST['cost'][7] + $_POST['cost'][8] + $_POST['cost'][9] + $_POST['cost'][10] + $_POST['cost'][11] + $_POST['cost'][12] + $_POST['cost'][13] + $_POST['cost'][14] + $_POST['cost'][15] +
+$_POST['cost'][16] + $_POST['cost'][17] + $_POST['cost'][18] + $_POST['cost'][19] + $_POST['cost'][20] + $_POST['cost'][21] + $_POST['cost'][22] + $_POST['cost'][23];
+
+
+
+$earnings = $_POST['earnings'][0] + $_POST['earnings'][1] + $_POST['earnings'][2] + $_POST['earnings'][3] + $_POST['earnings'][4] + $_POST['earnings'][5] + $_POST['earnings'][6] + $_POST['earnings'][7] + $_POST['earnings'][8] + $_POST['earnings'][9] + $_POST['earnings'][10] + $_POST['earnings'][11] +
+$_POST['earnings'][12] + $_POST['earnings'][13] + $_POST['earnings'][14] + $_POST['earnings'][15] + $_POST['earnings'][16] + $_POST['earnings'][17] + $_POST['earnings'][18] + $_POST['earnings'][19] + $_POST['earnings'][20] + $_POST['earnings'][21] + $_POST['earnings'][22] + $_POST['earnings'][23];
+
+$profit= $earnings - $cost;
+
+
+	    echo "Net Income:"; echo $profit;
+	  ?>
+		 </td>
+		 
+		 
+		 <td>
+
+		 </td>
+		 
+		 
+		 
+		  <td>
+		 
+		 </td>
+		 
+		 
+		 <td>
+		 
+		 </td>
+		 
+		 
+		 <td>
+		 
+		 </td>
+		 
+     </tr>
+	 
+</table>
+
+<span id="back" onclick="back()">Make a new report</span>
+
+<p>
+        Report history
+        </p>
+    <?php
+    $name = "SELECT * FROM data";
+    $name2 =mysql_query($name);
+  while($row1 = mysql_fetch_array($name2)){
+       $title2 = ($row1['name']);
+      $title = urlencode($row1['name']);
+    if(strlen($title)>0){
+        echo '
+        
+        <p>
+        <a href=history.php?name='.$title2.'&profit='.$profit.'>'.$title2.'</a>
+        </p>
+        ';
+    }
+  }
+   
+    
+    ?>
+
+<body>
+
+
+</body>
+</html>

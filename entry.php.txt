@@ -1,0 +1,1504 @@
+<?php
+
+
+include("connect.php");
+
+?>
+
+<html>
+<head>
+   
+<script>
+
+
+
+
+function chagerun(){
+ 
+
+  var change = document.getElementsByTagName("INPUT")[5].value = show;
+  
+
+
+ }
+ function myFunction(){ 
+ 
+ var list = document.getElementsByTagName("INPUT")[0].value;
+
+ var res = list.split(" ");
+ 
+
+var change = document.getElementsByTagName("INPUT")[74].value = res[8];
+var change = document.getElementsByTagName("INPUT")[75].value = res[12];
+var change = document.getElementsByTagName("INPUT")[76].value = res[16];
+var change = document.getElementsByTagName("INPUT")[78].value = res[37];
+
+var change = document.getElementsByTagName("INPUT")[79].value = res[41];
+var change = document.getElementsByTagName("INPUT")[80].value = res[45];
+var change = document.getElementsByTagName("INPUT")[82].value = res[66];
+var change = document.getElementsByTagName("INPUT")[83].value = res[70];
+
+var change = document.getElementsByTagName("INPUT")[84].value = res[74];
+var change = document.getElementsByTagName("INPUT")[86].value = res[95];
+var change = document.getElementsByTagName("INPUT")[87].value = res[99];
+var change = document.getElementsByTagName("INPUT")[88].value = res[103];
+
+
+var change = document.getElementsByTagName("INPUT")[90].value = res[124];
+var change = document.getElementsByTagName("INPUT")[91].value = res[128];
+var change = document.getElementsByTagName("INPUT")[92].value = res[132];
+var change = document.getElementsByTagName("INPUT")[94].value = res[153];
+
+
+var change = document.getElementsByTagName("INPUT")[95].value = res[157];
+var change = document.getElementsByTagName("INPUT")[96].value = res[161];
+var change = document.getElementsByTagName("INPUT")[98].value = res[182];
+var change = document.getElementsByTagName("INPUT")[99].value = res[186];
+
+
+var change = document.getElementsByTagName("INPUT")[100].value = res[190];
+var change = document.getElementsByTagName("INPUT")[102].value = res[211];
+var change = document.getElementsByTagName("INPUT")[103].value = res[215];
+var change = document.getElementsByTagName("INPUT")[104].value = res[219];
+
+
+var change = document.getElementsByTagName("INPUT")[106].value = res[240];
+var change = document.getElementsByTagName("INPUT")[107].value = res[244];
+var change = document.getElementsByTagName("INPUT")[108].value = res[248];
+var change = document.getElementsByTagName("INPUT")[110].value = res[269];
+
+var change = document.getElementsByTagName("INPUT")[111].value = res[273];
+var change = document.getElementsByTagName("INPUT")[112].value = res[277];
+var change = document.getElementsByTagName("INPUT")[114].value = res[298];
+var change = document.getElementsByTagName("INPUT")[115].value = res[302];
+
+var change = document.getElementsByTagName("INPUT")[116].value = res[306];
+var change = document.getElementsByTagName("INPUT")[118].value = res[327];
+var change = document.getElementsByTagName("INPUT")[119].value = res[331];
+var change = document.getElementsByTagName("INPUT")[120].value = res[335];
+
+
+var change = document.getElementsByTagName("INPUT")[122].value = res[356];
+var change = document.getElementsByTagName("INPUT")[123].value = res[360];
+var change = document.getElementsByTagName("INPUT")[124].value = res[364];
+var change = document.getElementsByTagName("INPUT")[126].value = res[385];
+
+
+var change = document.getElementsByTagName("INPUT")[127].value = res[389];
+var change = document.getElementsByTagName("INPUT")[128].value = res[393];
+var change = document.getElementsByTagName("INPUT")[130].value = res[414];
+var change = document.getElementsByTagName("INPUT")[131].value = res[418];
+
+
+var change = document.getElementsByTagName("INPUT")[132].value = res[422];
+var change = document.getElementsByTagName("INPUT")[134].value = res[443];
+var change = document.getElementsByTagName("INPUT")[135].value = res[447];
+var change = document.getElementsByTagName("INPUT")[136].value = res[451];
+
+
+
+var change = document.getElementsByTagName("INPUT")[138].value = res[472];
+var change = document.getElementsByTagName("INPUT")[139].value = res[476];
+var change = document.getElementsByTagName("INPUT")[140].value = res[480];
+var change = document.getElementsByTagName("INPUT")[142].value = res[501];
+
+var change = document.getElementsByTagName("INPUT")[143].value = res[505];
+var change = document.getElementsByTagName("INPUT")[144].value = res[509];
+var change = document.getElementsByTagName("INPUT")[146].value = res[530];
+var change = document.getElementsByTagName("INPUT")[147].value = res[534];
+
+var change = document.getElementsByTagName("INPUT")[148].value = res[538];
+var change = document.getElementsByTagName("INPUT")[150].value = res[559];
+var change = document.getElementsByTagName("INPUT")[151].value = res[563];
+var change = document.getElementsByTagName("INPUT")[152].value = res[567];
+var change = document.getElementsByTagName("INPUT")[154].value = res[588];
+var change = document.getElementsByTagName("INPUT")[155].value = res[592];
+var change = document.getElementsByTagName("INPUT")[156].value = res[596];
+var change = document.getElementsByTagName("INPUT")[158].value = res[617];
+var change = document.getElementsByTagName("INPUT")[159].value = res[621];
+var change = document.getElementsByTagName("INPUT")[160].value = res[625];
+var change = document.getElementsByTagName("INPUT")[162].value = res[646];
+var change = document.getElementsByTagName("INPUT")[163].value = res[650];
+var change = document.getElementsByTagName("INPUT")[164].value = res[654];
+var change = document.getElementsByTagName("INPUT")[166].value = res[675];
+var change = document.getElementsByTagName("INPUT")[167].value = res[679];
+var change = document.getElementsByTagName("INPUT")[168].value = res[683];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+  
+  
+  
+ }
+
+
+
+
+
+
+
+</script>
+<style type="text/css">
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  margin-left:20%;
+}
+
+
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#data{
+ margin-left:0%;   
+  margin-top:-20%;  
+}
+#radio{
+margin-left:40%;
+}
+#epic{
+position:absolute;
+margin-top:75%; 
+margin-left:40%;
+            
+        }
+</style>
+</head>
+<body>
+    <div id="epic">
+          <input type="text" id="data"/>
+        <button  onclick="myFunction()">
+            Enter data 
+        </button>
+        </div>
+    
+<form method="POST"  action="reporting.php" name="whole">
+
+
+<table>
+     <tr>
+         <td>
+		 Time
+		 </td>
+		 
+		 
+		 <td>
+		 Impressions
+		 </td>
+		 
+		 
+		 <td>
+		 Cost
+		 </td>
+        
+		
+     </tr>
+
+
+	 <tr>
+         <td>
+		 <input type="text" value="0:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" id="fim" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="1:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="2:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="3:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="4:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="5:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="6:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="7:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="8:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="9:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="10:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="11:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="12:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="13:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="14:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	  </tr>
+	 
+	  <tr>
+         <td>
+		 <input type="text" value="15:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+      <tr>
+         <td>
+		 <input type="text" value="16:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+      <tr>
+         <td>
+		 <input type="text" value="17:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+      <tr>
+         <td>
+		 <input type="text" value="18:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+      <tr>
+         <td>
+		 <input type="text" value="19:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+      <tr>
+         <td>
+		 <input type="text" value="20:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+      <tr>
+         <td>
+		 <input type="text" value="21:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+      <tr>
+         <td>
+		 <input type="text" value="22:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+      <tr>
+         <td>
+		 <input type="text" value="23:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="impressions[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="cost[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+	 
+</table>
+
+<br><br><br><br><br><br>
+       
+	   
+	   
+	   
+	   
+	   
+	   
+	 
+	   
+	   
+	   <br><br><br>
+	   
+	   
+	   
+	   
+<table>
+     <tr>
+         <td>
+		 Time
+		 </td>
+		 
+		 
+		 <td>
+		 Clicks
+		 </td>
+		 
+		 
+		 <td>
+		 Conversions
+		 </td>
+        
+		<td>
+		Earnings
+		</td>
+		
+     </tr>
+
+	 
+	 <tr>
+         <td>
+		  <input type="text" value="0:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 <tr>
+         <td>
+		<input type="text" value="1:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	 
+	 
+	  <tr>
+         <td>
+		  <input type="text" value="2:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 <tr>
+         <td>
+		<input type="text" value="3:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+		<input type="text" value="4:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+      <tr>
+         <td>
+		<input type="text" value="5:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+     
+     
+     <tr>
+         <td>
+		<input type="text" value="6:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	 
+	 
+	  <tr>
+         <td>
+		  <input type="text" value="7:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 <tr>
+         <td>
+		<input type="text" value="8:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+		<input type="text" value="9:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+      <tr>
+         <td>
+		<input type="text" value="10:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <tr>
+         <td>
+		<input type="text" value="11:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	 
+	 
+	  <tr>
+         <td>
+		  <input type="text" value="12:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 <tr>
+         <td>
+		<input type="text" value="13:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+		<input type="text" value="14:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+      <tr>
+         <td>
+		<input type="text" value="15:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+     
+     
+     <tr>
+         <td>
+		<input type="text" value="16:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	 
+	 
+	  <tr>
+         <td>
+		  <input type="text" value="17:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 <tr>
+         <td>
+		<input type="text" value="18:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	  <tr>
+         <td>
+		<input type="text" value="19:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+      <tr>
+         <td>
+		<input type="text" value="20:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+     
+     
+     
+     <tr>
+         <td>
+		<input type="text" value="21:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+	 
+	 
+	 
+	  <tr>
+         <td>
+		  <input type="text" value="22:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 <tr>
+         <td>
+		<input type="text" value="23:00" name="time[]" readonly/>
+		 </td>
+		 
+		 
+		 <td>
+		<input type="text" name="clicks[]"/>
+		 </td>
+		 
+		 
+		 <td>
+		 <input type="text" name="conversions[]"/>
+		 </td>
+        
+		
+		 
+		 <td>
+		 <input type="text" name="earnings[]"/>
+		 </td>
+        
+		
+		
+		 
+     </tr>
+	 
+	 
+     
+     
+     
+     
+</table>
+
+<div id ="radio">
+    
+  <input type="radio" name="zone" value="Eastern"/>Eastern Time
+<input type="radio" name="zone" value="Mountain"/> Mountain Time
+<input type="radio" name="zone" value="Pacific"/> Pacific Time
+
+
+	 <input type="submit" name="submit" placeholder="submit"/>
+	 
+	</div>
+	 
+</form>
+
+<p>
+        Report history
+        </p>
+    <?php
+    $name = "SELECT * FROM data";
+    $name2 =mysql_query($name);
+  while($row1 = mysql_fetch_array($name2)){
+      $title = $row1['name'];
+    if(strlen($title)>0){
+        echo '
+        
+        <p>
+        <a href=history.php?name='.$title.'&profit='.$profit.'>'.$title.'</a>
+        </p>
+        ';
+    }
+  }
+   
+    
+    ?>
+
+</body>
+
+</html>
